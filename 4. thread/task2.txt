@@ -1,0 +1,36 @@
+🧠 Task 1: Understand List vs Vector
+📄 Task: Compare and write the differences between List and Vector in Java.
+
+🧩 Focus:
+
+Thread safety
+
+Performance
+
+Synchronization
+
+🧠 Task 2: Understand HashSet vs LinkedHashSet
+📄 Task: Compare and write the differences between HashSet and LinkedHashSet.
+
+🧩 Focus:
+
+Order of elements
+
+Performance
+
+Use cases
+
+🧠 Task 3: Understand String vs StringBuilder vs StringBuffer
+📄 Task: Compare and write the differences between String, StringBuilder, and StringBuffer.
+
+🧩 Focus:
+
+Mutability
+
+Thread safety
+
+Performance
+
+When to use each
+
+

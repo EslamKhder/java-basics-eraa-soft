@@ -1,0 +1,54 @@
+🔹 Basic Thread Creation
+Create and run a simple thread
+
+Task: Create a class that extends Thread, override run() method, and print "Hello from thread". Start the thread.
+
+Implement Runnable interface
+
+Task: Create a class that implements Runnable and prints the current thread name and a message.
+
+---------------------------------------------
+ Thread Sleep and Join
+Use Thread.sleep()
+
+Task: Print numbers 1 to 5 with a 1-second delay between each number using sleep().
+
+Use Thread.join()
+
+Task: Create two threads. Make the main thread wait for them to finish using join().
+-----------------------------------------------------------
+this task contain wait and notify pls search about this and apply 
+
+📄 Task Description:
+Create a BankAccount class shared between two types of threads:
+
+Depositor Thread: adds money to the account.
+
+Withdrawer Thread: takes money from the account.
+
+You will:
+
+Start one Depositor thread and one Withdrawer thread.
+
+The Depositor will deposit money every few seconds.
+
+The Withdrawer will try to withdraw money every few seconds.
+
+Use synchronized and wait/notify to make it thread-safe.
+
+🧩 Requirements:
+BankAccount class:
+
+Fields: balance
+
+Methods:
+
+deposit(int amount)
+
+withdraw(int amount)
+
+Use wait() if balance is low and notify() after deposit.
+
+Simulate deposits and withdrawals every 1–2 seconds.
+
+------------------------------------------------------------------
