@@ -1,0 +1,36 @@
+🔰 Level 1: Basic Try-Catch Practice
+🧩 Task 1: Divide Two Numbers
+Ask user for two integers. Divide them and handle ArithmeticException (e.g., divide by zero).
+
+🧩 Task 2: Convert String to Integer
+Ask user to enter a number in a String, convert it to int, and handle NumberFormatException.
+
+🧩 Task 3: Null Pointer
+Create a method that calls toUpperCase() on a string. Pass null and handle NullPointerException.
+
+🟡 Level 2: Working with Arrays and Files
+🧩 Task 4: Access Array Element
+Create an array of 5 elements. Ask user to enter an index and print the value. Handle ArrayIndexOutOfBoundsException.
+
+🧩 Task 5: Read File
+Try to read a file from disk and handle FileNotFoundException. (Use FileReader or Scanner)
+
+🧩 Task 6: Multiple Catch Blocks
+Write a program that may throw both NullPointerException and ArithmeticException. Use multiple catch blocks.
+
+🟠 Level 3: Custom Exceptions
+🧩 Task 7: Create a Custom Exception
+Create a custom exception InvalidAgeException. If user age < 18, throw the exception.
+
+🧩 Task 9: Propagate Exception
+Create a method that throws an exception and another method that calls it. Demonstrate how exceptions propagate.
+
+🧩 Task 10: Throws Keyword
+Create a method readFile() that throws IOException. Call it from main() using try-catch.
+
+🧠 Bonus / Challenging Tasks
+🧩 Task 11: Finally Block Demo
+Write a program with a try-catch-finally block and show that the finally block always executes.
+
+🧩 Task 12: Nested Try-Catch
+Use nested try-catch blocks where inner block causes ArithmeticException and outer catches it.
