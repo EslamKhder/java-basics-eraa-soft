@@ -1,0 +1,14 @@
+Generic
+-----------------------------------------
+Iterators & Comparators
+-----------------------------------
+SOLID principles and how they apply in OOP
+-----------------------------------
+Boxing/unboxing, autoboxing pitfalls
+--------------------------------------------
+Iterating: for-each, Iterator, ListIterator
+-----------------------------------------------
+Sorting using Comparable and Comparator
+--------------------------------------------------
+DRY, KISS, YAGNI principles
+--------------------------------------------------------
