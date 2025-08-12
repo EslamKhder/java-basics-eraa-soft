@@ -64,7 +64,7 @@ List<List<String>> nestedWords = Arrays.asList(
     Arrays.asList("API", "Lambda"),
     Arrays.asList("FlatMap", "Map")
 );
------------------------------------------------------
+------------------------------------------------------
 pls apply next 
 🔹 Basic Stream Operations
 Filter even numbers from a list of integers.
