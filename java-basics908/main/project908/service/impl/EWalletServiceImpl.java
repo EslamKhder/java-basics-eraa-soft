@@ -3,16 +3,20 @@ package main.project908.service.impl;
 import main.project908.model.Account;
 import main.project908.model.EWalletSystem;
 import main.project908.service.AccountService;
+import main.project908.service.AccountValidationService;
 import main.project908.service.ApplicationService;
 
 import java.util.Objects;
 import java.util.Scanner;
 
+// TODO remove any duplicated code
+// TODO  fix any runtime exception try catch
 public class EWalletServiceImpl implements ApplicationService {
 
     private Scanner scanner = new Scanner(System.in);
 
     private AccountService accountService = new AccountServiceImpl();
+    private AccountValidationService accountValidationService = new AccountValidationServiceImpl();
     @Override
     public void startApp() {
         System.out.println("---------- hi sir welcome to " + EWalletSystem.getName() + " ----------");
@@ -27,7 +31,7 @@ public class EWalletServiceImpl implements ApplicationService {
 
             switch (choose) {
                 case 'a':
-                    login();
+                    login(); // *******************
                     break;
                 case 'b':
                     signup();
@@ -53,9 +57,14 @@ public class EWalletServiceImpl implements ApplicationService {
     }
 
     private void signup() {
-
+        scanner = new Scanner(System.in);
         System.out.println("pls enter username.");
         String username = scanner.nextLine();
+        if (!accountValidationService.isUserNameValid(username)) {
+            System.out.println("invalid user name :(");
+            return;
+        }
+        // TODO APPLY Validation for password and phone number
         System.out.println("pls enter password.");
         String password = scanner.nextLine();
         System.out.println("pls enter phone number.");
@@ -72,10 +81,7 @@ public class EWalletServiceImpl implements ApplicationService {
     }
 
     private void login() {
-        // TODO get username and password from user
-        // TODO validate if user exist
-        // TODO if user exist got to main profile contain (1.deposit 2.withdraw 3.show_details 4.logout)
-
+        scanner = new Scanner(System.in);
         System.out.println("pls enter username.");
         String username = scanner.nextLine();
         System.out.println("pls enter password.");
@@ -85,7 +91,7 @@ public class EWalletServiceImpl implements ApplicationService {
         account = accountService.getAccount(account);
 
         if (Objects.nonNull(account)){
-            // TODO main profile
+            System.out.println("success login :)");
             mainProfile(account);
         } else {
             System.out.println("invalid username or password :(");
@@ -93,7 +99,9 @@ public class EWalletServiceImpl implements ApplicationService {
     }
 
     private void mainProfile(Account account) {
-        System.out.println("1.deposit  2.withdraw  3.show_details   4.logout");
+        while (true) {
+            boolean isExit = false;
+            System.out.println("1.deposit  2.withdraw  3.Transfer  4.show_details  6.change password  7.remove account   5.logout");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt(); // assuming you have a Scanner named 'scanner'
 
@@ -107,39 +115,85 @@ public class EWalletServiceImpl implements ApplicationService {
                     break;
 
                 case 3:
-                    showAccountDetails(account);
+                    transfer(account);
                     break;
 
                 case 4:
-                    System.out.println("Logging out...");
+                    showAccountDetails(account);
                     break;
+
+                case 5:
+                    System.out.println("Logging out...");
+                    isExit = true;
+                    break;
+                case 6:
+                    changePassword(account);
+                    break;
+                case 7:
+                    removeAccount(account);
+                    break;
+
 
                 default:
                     System.out.println("Invalid choice! Please try again.");
             }
-        }
 
-    void deposit(Account account){
+            if (isExit) {
+                break;
+            }
+        }
+    }
+
+    private void removeAccount(Account account) {
+
+    }
+
+    private void changePassword(Account account) {
+
+    }
+
+    private void transfer(Account account) {
+        scanner = new Scanner(System.in);
+        System.out.println("pls enter user name of account you need to transfer.");
+        String userName = scanner.nextLine();
         System.out.println("pls enter amount.");
         double amount = scanner.nextDouble();
-        accountService.deposit(account, amount);
+
+        if (accountService.transfer(account, userName, amount)) {
+            System.out.println("success transfer :)");
+        } else {
+            System.out.println("transfer failed :(");
+        }
+    }
+
+    private void deposit(Account account){
+        System.out.println("pls enter amount.");
+        double amount = scanner.nextDouble();
+        if (accountService.deposit(account, amount)) {
+            System.out.println("success deposit :)");
+        } else {
+            System.out.println("deposit failed :(");
+        }
     }
 
 
     void withDraw(Account account){
         System.out.println("pls enter amount.");
         double amount = scanner.nextDouble();
-        accountService.withdraw(account, amount);
 
+        if (accountService.withdraw(account, amount)) {
+            System.out.println("success withDraw :)");
+        } else {
+            System.out.println("withDraw failed :(");
+        }
     }
 
     void showAccountDetails(Account account){
-
+        account = accountService.getAccount(account);
+        System.out.println("1.username: " + account.getUserName());
+        System.out.println("2.Password: " + account.getPassword());
+        System.out.println("3.Balance: " + account.getBalance());
+        System.out.println("4.PhoneNumber: " + account.getPhoneNumber());
     }
-
-
-
-
-
 
 }

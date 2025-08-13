@@ -8,4 +8,5 @@ public interface AccountService {
 
     boolean deposit(Account account, double amount);
     boolean withdraw(Account account, double amount);
+    boolean transfer(Account account, String userNameTransfer, double amount);
 }
