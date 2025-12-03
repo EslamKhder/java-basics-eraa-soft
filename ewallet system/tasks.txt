@@ -120,6 +120,9 @@ Display goodbye message.
 
 Return to main application menu.
 
+⚫ Phase 10 — Exceptions
+pls fix any exception on app.
+
 🟩 Bonus / Extra Tasks (Optional Enhancements)
 
 Add transaction history (deposit, withdraw, transfer).
