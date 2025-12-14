@@ -125,8 +125,13 @@ pls fix any exception on app.
 
 🟩 Bonus / Extra Tasks (Optional Enhancements)
 
-Add transaction history (deposit, withdraw, transfer).
+Add transaction history (deposit, withdraw, transfer, signup, login).
 
 Add admin panel to view all accounts.
-
+{
+	when application up auto add admin user with username   IAM   password   IAM123,
+	pls add flag isAdmin on account and fix any issue and impacted area,
+	
+}
 Add option to delete account.
+Add option to inactive account.
