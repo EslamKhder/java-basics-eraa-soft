@@ -1,0 +1,109 @@
+🟢 Level 1 – OOP Basics (1–10)
+
+Create a class named Person with attributes name and age.
+
+Add a constructor to initialize all attributes of Person.
+
+Create a method that prints all person information.
+
+Create a class named Student with attributes id and grade.
+
+Add getter and setter methods for all attributes in Student.
+
+Create multiple objects from Student and store them in a list.
+
+Add a static attribute to represent the school name.
+
+Count how many objects are created using a static variable.
+
+Create a method that determines if a student passed or failed.
+
+Override the toString method to display object data.
+
+🟡 Level 2 – Encapsulation (11–20)
+
+Make all class attributes private and access them using getters and setters.
+
+Validate age so it cannot be negative.
+
+Validate student grade to be between 0 and 100.
+
+Create a class BankAccount with balance encapsulation.
+
+Prevent direct modification of account balance.
+
+Add methods to deposit and withdraw money.
+
+Prevent withdrawing more than the available balance.
+
+Create a class Employee with a read-only employee ID.
+
+Hide sensitive information like passwords.
+
+Create an immutable class.
+
+🔵 Level 3 – Inheritance (21–30)
+
+Create a base class Animal with common behaviors.
+
+Create subclasses like Dog and Cat.
+
+Override a method in the subclass.
+
+Use super keyword to call parent constructor.
+
+Create a multilevel inheritance structure.
+
+Prevent inheritance using the final keyword.
+
+Create a protected attribute accessible by subclasses.
+
+Demonstrate method overriding rules.
+
+Use polymorphism with parent reference and child object.
+
+Create a class hierarchy for vehicles.
+
+🟣 Level 4 – Abstraction & Interfaces (31–40)
+
+Create an abstract class with abstract methods.
+
+Implement abstract methods in subclasses.
+
+Prevent object creation from abstract class.
+
+Create an interface with method declarations.
+
+Implement an interface in a class.
+
+Implement multiple interfaces in one class.
+
+Use interface reference to call implementation.
+
+Create a real-world example using abstraction.
+
+Differentiate between abstract class and interface.
+
+Design a payment system using interfaces.
+
+🔴 Level 5 – Advanced OOP Concepts (41–50)
+
+Demonstrate runtime polymorphism.
+
+Use method overloading in a real example.
+
+Apply composition instead of inheritance.
+
+Create a class diagram from an OOP design.
+
+Apply SOLID principles in class design.
+
+Identify tight coupling and refactor it.
+
+Create a small system using all OOP concepts.
+
+Handle dependency injection manually.
+
+Apply OOP principles to a real business case.
+
+Refactor a procedural code into OOP design.
