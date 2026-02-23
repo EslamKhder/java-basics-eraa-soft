@@ -1,0 +1,137 @@
+✅ E-Wallet System Tasks (Step-By-Step & Ordered)
+
+These tasks follow the real flow of an e-wallet system: signup → login → features.
+
+🔵 Phase 1 — Sign-Up Tasks
+
+Validate username (length, first letter uppercase, unique).
+
+Validate password (length, complexity).
+
+Validate age (must be >= 18).
+
+Validate phone number (Egypt format, numeric, unique).
+
+Create account and store it inside the wallet.
+
+Prevent duplicate accounts (same username or same phone number).
+
+🟢 Phase 2 — Login Tasks
+
+Ask user for username + password.
+
+Validate user input not empty.
+
+Check if the user exists.
+
+Check password matches.
+
+Allow maximum 3–4 invalid attempts.
+
+After successful login → go to login features menu.
+
+🟡 Phase 3 — After Login (Main Features Menu)
+
+Show user menu:
+
+Deposit
+
+Withdraw
+
+Transfer
+
+Show account details
+
+Change password
+
+Logout
+
+🔵 Phase 4 — Deposit Tasks
+
+Validate deposit amount (must be > 0).
+
+Check if account exists.
+
+Increase user balance.
+
+Show success message with updated balance.
+
+🟠 Phase 5 — Withdraw Tasks
+
+Validate withdraw amount (must be > 0).
+
+Check if account exists.
+
+Ensure user has enough balance.
+
+Deduct money.
+
+Show success message with updated balance.
+
+🟣 Phase 6 — Transfer Money Tasks
+
+Validate destination username.
+
+Check if source account exists.
+
+Check if destination account exists.
+
+Prevent transfer to yourself.
+
+Validate amount > 0.
+
+Check sufficient balance.
+
+Deduct from sender.
+
+Add to receiver.
+
+Show transfer confirmation with updated balances.
+
+🔴 Phase 7 — Change Password Tasks
+
+Ask user for old password.
+
+Validate old password matches.
+
+Ask for new password.
+
+Validate new password format.
+
+Prevent using same old password.
+
+Update password.
+
+Show success message.
+
+🟤 Phase 8 — Show Account Details
+
+Fetch updated account object from wallet.
+
+Display username, phone number, age, and balance.
+
+Hide password or show it with masking (optional task).
+
+⚫ Phase 9 — Logout
+
+Exit menu loop.
+
+Display goodbye message.
+
+Return to main application menu.
+
+⚫ Phase 10 — Exceptions
+pls fix any exception on app.
+
+🟩 Bonus / Extra Tasks (Optional Enhancements)
+
+Add transaction history (deposit, withdraw, transfer, signup, login).
+
+Add admin panel to view all accounts.
+{
+	when application up auto add admin user with username   IAM   password   IAM123,
+	pls add flag isAdmin on account and fix any issue and impacted area,
+	
+}
+Add option to delete account.
+Add option to inactive account.
