@@ -1,4 +1,6 @@
-Please Create App facebook & LinkedIn api for posts that accept (id,text,image) and show them
+Please Create App facebook & LinkedIn for posts that accept (id,text,image) and show them
 Look!
 on facbook please print that you are on application facebook
 on LinkedIn please print that you are on application LinkedIn
+
+

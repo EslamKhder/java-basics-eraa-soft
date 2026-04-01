@@ -1,0 +1,46 @@
+🟢 Level 1: Basics of equals & hashCode
+Create a Person class with fields: id, name
+Define what makes two persons equal (by id only)
+Compare two different objects with same values
+Check behavior before overriding equals()
+Then check behavior after
+Create multiple Person objects with same id
+Test equality manually using .equals()
+Think:
+What happens if you override equals() but NOT hashCode()?
+🟡 Level 2: Working with HashSet
+Add duplicate Person objects into a HashSet
+Observe behavior before overriding methods
+Observe behavior after overriding both
+Add 10 Person objects where:
+Some have same id
+Some have different id
+Check how many remain in the HashSet
+Try changing equality logic:
+First: based on id
+Then: based on name
+Then: based on both
+👉 Observe how HashSet behavior changes
+🟠 Level 3: Working with HashMap
+Use Person as a key in a HashMap
+Store values like "Employee", "Manager"
+Insert two keys with same id
+Check if value is replaced or duplicated
+Retrieve value using a new object with same data
+Check if retrieval works or not
+Modify a key after inserting into HashMap
+Example: change name or id
+Try retrieving again
+👉 Observe the problem
+🔵 Level 4: Real-world Scenarios
+Create a Product class (code, price)
+Define equality based on code only
+Store in HashSet
+Create a Student class (id, email)
+Define equality based on:
+case 1: id
+case 2: email
+Compare results in collections
+Create a Car class (plateNumber, color)
+Use it as a key in HashMap
+Simulate real system behavior
